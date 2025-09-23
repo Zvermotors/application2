@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="800" prefHeight="500"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <children>
+        <SplitPane prefWidth="800" prefHeight="500">
+            <items>
+                <!-- Левая панель с кнопками -->
+                <AnchorPane prefWidth="200" minWidth="150">
+                    <children>
+                        <Button fx:id="btnAdd" layoutX="50" layoutY="20" text="Добавить" />
+                        <Button fx:id="btnEdit" layoutX="35" layoutY="60" text="Редактировать" />
+                        <Button fx:id="btnDelete" layoutX="55" layoutY="100" text="Удалить" />
+                        <Label fx:id="lblLog" layoutX="10" layoutY="150" text="Label" />
+                        <Button layoutX="14" layoutY="440" prefWidth="172" text="Выход" />
+                    </children>
+                </AnchorPane>
+
+                <!-- Правая панель с таблицей и поиском -->
+                <AnchorPane>
+                    <children>
+                        <TableView fx:id="tableView" layoutX="0" layoutY="0" prefWidth="580" prefHeight="320">
+                            <columns>
+                                <TableColumn fx:id="colSurname" text="Фамилия" prefWidth="100" />
+                                <TableColumn fx:id="colName" text="Имя" prefWidth="100" />
+                                <TableColumn fx:id="colPatronymic" text="Отчество" prefWidth="100" />
+                                <TableColumn fx:id="colAge" text="Возраст" prefWidth="80" />
+                                <TableColumn fx:id="colCity" text="Город" prefWidth="100" />
+                                <TableColumn fx:id="colGroup" text="Группа" prefWidth="100" />
+                            </columns>
+                        </TableView>
+
+                        <TextField fx:id="tfSearchSurname" layoutX="10" layoutY="340" promptText="Фамилия" />
+                        <TextField fx:id="tfSearchGroup" layoutX="200" layoutY="340" promptText="Группа" />
+                        <Button fx:id="btnSearch" layoutX="400" layoutY="340" text="Поиск" />
+                        <Button fx:id="btnReset" layoutX="480" layoutY="340" text="Сброс" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
